@@ -1,0 +1,20 @@
+{
+    "name": "ptmath",
+    "description": "Website for peachtree math circle",
+    "type": "module",
+    "authors": [
+        "Username93939",
+        "gensahilsingh",
+        "soc-oi"
+    ],
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "license": "",
+    "dependencies": {
+        "@types/node": "^25.2.3",
+        "express": "^5.2.1"
+    }
+}
