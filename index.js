@@ -16,6 +16,11 @@ app.get("/", (req, res) => {
     res.sendFile(`${__dirname}/public/index.html`);
 });
 
+//sends error-404.html when the user gets a 404 error
+app.use((req, res, next) => {
+    res.status(404).sendFile(`${__dirname}/public/error-404.html`);
+});
+
 app.listen(3000, (err) => {
     if (err) {
         throw err;
