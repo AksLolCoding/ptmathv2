@@ -2,4 +2,34 @@
 
 html {
     font-family: 'Inter';
+    background-color: #d7eca6;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+.navbar {
+    background-color: #83a050;
+    position: fixed;
+    margin: 0px;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 10vh;
+    line-height: 10vh;
+}
+
+.navbar a:hover {
+    background-color: #617e3e;
 }
