@@ -45,3 +45,22 @@ body {
 .navbar .home img:hover {
     content: url('/images/favicon-dark.png');
 }
+
+.discord {
+    margin-left: auto!important;
+}
+
+.discord img {
+    max-height: 5vh!important;
+    padding-top: 2.5vh;
+}
+
+.insta img { 
+    max-height: 5vh!important;
+    padding-top: 2.5vh;
+}
+
+.email img {
+    max-height: 5vh!important;
+    padding-top: 2.5vh;
+}
