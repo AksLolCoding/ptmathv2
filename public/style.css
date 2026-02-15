@@ -33,3 +33,15 @@ body {
 .navbar a:hover {
     background-color: #617e3e;
 }
+
+.navbar a img {
+    max-height: 10vh;
+}
+
+.navbar .home:hover {
+    background-color: inherit!important;
+}
+
+.navbar .home img:hover {
+    content: url('/images/favicon-dark.png');
+}
