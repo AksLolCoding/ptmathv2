@@ -15,7 +15,7 @@ body {
     position: fixed;
     margin: 0px;
     width: 100vw;
-    height: 10vh;
+    height: 70px;
     display: flex;
     align-items: center;
 }
@@ -26,8 +26,8 @@ body {
     font-size: 20px;
     padding-left: 15px;
     padding-right: 15px;
-    height: 10vh;
-    line-height: 10vh;
+    height: 70px;
+    line-height: 70px;
 }
 
 .navbar a:hover {
@@ -35,7 +35,7 @@ body {
 }
 
 .navbar a img {
-    height: 10vh;
+    height: 70px;
 }
 
 .navbar .home:hover {
@@ -51,16 +51,16 @@ body {
 }
 
 .discord img {
-    height: 5vh!important;
-    padding-top: 2.5vh;
+    height: 35px!important;
+    padding-top: 17.5px;
 }
 
 .insta img { 
-    height: 5vh!important;
-    padding-top: 2.5vh;
+    height: 35px!important;
+    padding-top: 17.5px;
 }
 
 .email img {
-    height: 5vh!important;
-    padding-top: 2.5vh;
+    height: 35px!important;
+    padding-top: 17.5px;
 }
