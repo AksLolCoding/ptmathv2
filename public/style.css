@@ -20,6 +20,7 @@ body {
     display: flex;
     align-items: center;
     user-select: none!important;
+    z-index: 1000;
 }
 
 .navbar a, .navbar p {
@@ -156,4 +157,36 @@ br {
 
 #title * {
     transition: 300ms ease-in-out;
+}
+
+#title {
+    height: 100vh;
+}
+
+hr {
+    background-color: #a6a6a6;
+    height: 3px;
+    border-width: 0;
+    border-radius: 1.5px;
+    width: 60%;
+    display: block;
+    margin: 0 auto!important;
+    text-align: center;
+}
+
+.body {
+    width: 80vw;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading, .paragraph {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
