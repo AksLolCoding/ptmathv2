@@ -29,6 +29,7 @@ body {
     padding-right: 15px;
     height: 70px;
     line-height: 70px;
+    cursor: pointer;
 }
 
 .navbar a:hover, .navbar p:hover {
