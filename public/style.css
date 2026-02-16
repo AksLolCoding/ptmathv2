@@ -4,6 +4,7 @@ html {
     font-family: 'Inter';
     background-color: #d7eca6;
     padding: 0px;
+    scrollbar-width: none;
 }
 
 body {
@@ -114,4 +115,45 @@ body {
 
 br {
     user-select: none;
+}
+
+.main * {
+    margin: 0px;
+}
+
+.main .logo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    width: 150px;
+}
+
+.header * {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header p, .header h1 {
+    width: 426px;
+}
+
+#title *[data-state="unload"] {
+    opacity: 0;
+    padding-top: 200px;
+}
+
+#title *[data-state="load"] {
+    padding-top: 0px;
+    opacity: 1;
+}
+
+#title .logo-img[data-state="load"] {
+    padding-top: 90px;
+}
+
+#title * {
+    transition: 300ms ease-in-out;
 }
