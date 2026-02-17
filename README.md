@@ -1,2 +1,3 @@
 # ptmath
-yo ima go set up the stuff for node now bc why not
+
+Website for PeachTree Math Circle, a student-led Atlanta math community sharing events, resources, news, and team updates.
