@@ -1,33 +1,86 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Events - PeachTree Math Circle</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/style.css" />
         <link rel="icon" href="/images/favicon.ico" />
     </head>
     <body>
         <div class="navbar">
-            <a href="/" class="home"><img src="/images/favicon-light.png" /></a>
+            <a href="/" class="home"><img src="/images/favicon-light.png" alt="PeachTree Math Circle logo" /></a>
             <a href="/events">Events</a>
             <a href="/resources">Resources</a>
             <a href="/news">News</a>
             <a href="/calendar">Calendar</a>
             <a href="/team">Team</a>
-            <a href="https://discord.gg/8S4m29yV48" class="discord" target="_blank" title="Discord"><img src="/images/discord.png" /></a>
-            <a href="https://www.instagram.com/ptmathcircle/" class="insta" target="_blank" title="Instagram"><img src="/images/Instagram_Glyph_White.png" /></a>
-            <p class="email" title="Contact"><img src="/images/email-icon.png" /></p>
+            <a href="https://discord.gg/8S4m29yV48" class="discord" target="_blank" rel="noreferrer" title="Discord"><img src="/images/discord.png" alt="Discord" /></a>
+            <a href="https://www.instagram.com/ptmathcircle/" class="insta" target="_blank" rel="noreferrer" title="Instagram"><img src="/images/Instagram_Glyph_White.png" alt="Instagram" /></a>
+            <p class="email" title="Contact"><img src="/images/email-icon.png" alt="Email" /></p>
         </div>
+
         <div id="copyemailprompt">
             <div id="copyemailpopup" tabindex="0">
-                <p>Want to contact us?</p><br>
+                <p>Want to contact us?</p>
                 <button id="copyemail" type="button">Copy email</button>
             </div>
         </div>
+
+        <main class="page">
+            <section class="hero" style="--hero-image: linear-gradient(130deg, #274a79, #23573d); --showcase-image: url('/images/favicon.png');">
+                <div class="hero-copy">
+                    <h1 class="intro-item">Events & Workshops</h1>
+                    <p class="intro-item">Use this page for upcoming circles, practice sessions, and camp announcements. Duplicate cards below whenever you add a new event.</p>
+                </div>
+                <aside class="hero-media intro-item" data-parallax>
+                    <p>Swap this image in <code>/public/events.html</code> using <code>--showcase-image</code>.</p>
+                </aside>
+            </section>
+
+            <section class="section reveal">
+                <h2>Upcoming</h2>
+                <div class="grid cols-3">
+                    <article class="card">
+                        <h3>Problem Solving Circle</h3>
+                        <p><strong>Date:</strong> Add your date<br><strong>Location:</strong> Add your location</p>
+                        <p>Theme: counting and invariants for middle/high school contest students.</p>
+                    </article>
+                    <article class="card">
+                        <h3>AMC Strategy Session</h3>
+                        <p><strong>Date:</strong> Add your date<br><strong>Location:</strong> Add your location</p>
+                        <p>Focused timed sets, review of common traps, and solution debrief.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Mentor Open House</h3>
+                        <p><strong>Date:</strong> Add your date<br><strong>Location:</strong> Add your location</p>
+                        <p>Meet coaches, hear format plans, and ask questions about circle tracks.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section reveal">
+                <h2>Gallery Slots</h2>
+                <p class="section-intro">Use these three event images as placeholders for future recaps.</p>
+                <div class="image-strip">
+                    <figure class="image-card" style="--card-image: url('/images/favicon.png');">
+                        <figcaption>Circle setup</figcaption>
+                    </figure>
+                    <figure class="image-card" style="--card-image: url('/images/favicon-light.png');">
+                        <figcaption>Session activity</figcaption>
+                    </figure>
+                    <figure class="image-card" style="--card-image: url('/images/favicon-dark.png');">
+                        <figcaption>Team recap</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
         <script src="/scripts/contact.js"></script>
+        <script src="/scripts/load-animation.js"></script>
+        <script src="/scripts/scroll-effects.js"></script>
     </body>
 </html>

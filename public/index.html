@@ -6,62 +6,110 @@
         <title>PeachTree Math Circle</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/style.css" />
         <link rel="icon" href="/images/favicon.ico" />
     </head>
     <body>
         <div class="navbar">
-            <a href="/" class="home"><img src="/images/favicon-light.png" /></a>
+            <a href="/" class="home"><img src="/images/favicon-light.png" alt="PeachTree Math Circle logo" /></a>
             <a href="/events">Events</a>
             <a href="/resources">Resources</a>
             <a href="/news">News</a>
             <a href="/calendar">Calendar</a>
             <a href="/team">Team</a>
-            <a href="https://discord.gg/8S4m29yV48" class="discord" target="_blank" title="Discord"><img src="/images/discord.png" /></a>
-            <a href="https://www.instagram.com/ptmathcircle/" class="insta" target="_blank" title="Instagram"><img src="/images/Instagram_Glyph_White.png" /></a>
-            <p class="email" title="Contact"><img src="/images/email-icon.png" /></p>
+            <a href="https://discord.gg/8S4m29yV48" class="discord" target="_blank" rel="noreferrer" title="Discord"><img src="/images/discord.png" alt="Discord" /></a>
+            <a href="https://www.instagram.com/ptmathcircle/" class="insta" target="_blank" rel="noreferrer" title="Instagram"><img src="/images/Instagram_Glyph_White.png" alt="Instagram" /></a>
+            <p class="email" title="Contact"><img src="/images/email-icon.png" alt="Email" /></p>
         </div>
+
         <div id="copyemailprompt">
             <div id="copyemailpopup" tabindex="0">
-                <p>Want to contact us?</p><br>
+                <p>Want to contact us?</p>
                 <button id="copyemail" type="button">Copy email</button>
             </div>
         </div>
+
+        <main class="page">
+            <section class="hero" style="--hero-image: url('/images/favicon.png'); --showcase-image: url('/images/favicon-light.png');">
+                <div class="hero-copy">
+                    <h1 class="intro-item">PeachTree Math Circle</h1>
+                    <p class="intro-item">Building joyful, rigorous problem solving for students across Georgia through math circles, events, and collaborative mentorship.</p>
+                    <div class="hero-badges intro-item">
+                        <span class="badge">Student-led</span>
+                        <span class="badge">Competition + Curiosity</span>
+                        <span class="badge">Beginner to Olympiad</span>
+                    </div>
+                </div>
+                <aside class="hero-media intro-item" data-parallax>
+                    <p>Replace this panel image by updating <code>--showcase-image</code> in <code>/public/index.html</code>.</p>
+                </aside>
+            </section>
+
+            <section class="section reveal">
+                <h2>What is PTMC?</h2>
+                <p class="section-intro">PeachTree Math Circle is a student-run community of learners and mentors focused on deep mathematical thinking. We build spaces where students can explore unfamiliar problems, discuss ideas, and strengthen proof-writing habits.</p>
+                <div class="grid cols-2">
+                    <article class="card">
+                        <h3>Guided Exploration</h3>
+                        <p>Sessions are designed around rich contest-style and open-ended tasks that reward experimentation, not just memorized techniques.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Welcoming Entry Points</h3>
+                        <p>New students can start with foundational circles while advanced participants tackle challenge tracks and national-level prep.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section reveal">
+                <h2>Impact Snapshot</h2>
+                <p class="section-intro">Replace these numbers as your team grows. Keep each stat short so it reads clearly on mobile.</p>
+                <div class="stat-grid">
+                    <div class="stat">
+                        <strong>20+</strong>
+                        <span>AIME qualifiers in community</span>
+                    </div>
+                    <div class="stat">
+                        <strong>10+</strong>
+                        <span>MATHCOUNTS national competitors</span>
+                    </div>
+                    <div class="stat">
+                        <strong>5+</strong>
+                        <span>USA(J)MO qualifiers</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section reveal">
+                <h2>Community Highlights</h2>
+                <p class="section-intro">Each card below is an image slot. Update each <code>--card-image</code> value to your own files in <code>/public/images</code>.</p>
+                <div class="image-strip">
+                    <figure class="image-card" style="--card-image: url('/images/favicon.png');">
+                        <figcaption>Workshop day: problem sprint and live solutions</figcaption>
+                    </figure>
+                    <figure class="image-card" style="--card-image: url('/images/favicon-light.png');">
+                        <figcaption>Circle discussion: students sharing alternate proofs</figcaption>
+                    </figure>
+                    <figure class="image-card" style="--card-image: url('/images/favicon-dark.png');">
+                        <figcaption>Team prep: collaborative contest strategy</figcaption>
+                    </figure>
+                </div>
+                <p class="placeholder-note">Tip: keep image dimensions around 1600 x 1000 for sharp hero/cards on large displays.</p>
+            </section>
+
+            <section class="section reveal">
+                <h2>Join the Circle</h2>
+                <div class="cta">
+                    <p>Want announcements and meeting details? Join our Discord and follow Instagram for event drops, resource updates, and session recaps.</p>
+                    <p><a href="https://discord.gg/8S4m29yV48" target="_blank" rel="noreferrer">Join Discord</a> | <a href="https://www.instagram.com/ptmathcircle/" target="_blank" rel="noreferrer">Follow on Instagram</a></p>
+                </div>
+            </section>
+
+            <p class="footer-note">PeachTree Math Circle, Atlanta, Georgia</p>
+        </main>
+
         <script src="/scripts/contact.js"></script>
-        <div class="main">
-            <div id="title" class="header">
-                <img class="logo-img" src="/images/favicon.png" data-state="unload" /><br>
-                <h1 class="title" data-state="unload">PeachTree Math Circle</h1><br>
-                <p class="subtitle" data-state="unload">PTMC: Bringing problem solving and critical thinking to the Peach State through competition math.</p>
-            </div>
-            <script src="/scripts/load-animation.js"></script>
-            <div class="body">
-                <h2 class="heading">What is PTMC?</h2>
-                <hr>
-                <p class="paragraph">PeachTree Math Circle (PTMC) is a student-led community consisting of passionate competition math enthusiasts from the greater Atlanta area. Our team members share a common love for problem solving and are commited to helping students of all levels discover the beauty of mathematics.</p><br>
-                <h2 class="heading">Our Vision</h2>
-                <hr>
-                <p class="paragraph">PTMC was founded with a clear goal: helping more students discover a love for math and enabling them to develop important problem-solving and critical thinking skills. Importantly, PTMC offers entry points for beginners as well as growth opportunities for advanced students.</p><br>
-                <h2 class="heading">Our Team's Achievements</h2>
-                <table class="stat-table">
-                    <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                    </colgroup>
-                    <tr>
-                        <th>20+</th>
-                        <th>10+</th>
-                        <th>5+</th>
-                    </tr>
-                    <tr>
-                        <td>AIME Qualifiers</td>
-                        <td>MATHCOUNTS National Competitors</td>
-                        <td>USA(J)MO Qualifers</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        <script src="/scripts/load-animation.js"></script>
+        <script src="/scripts/scroll-effects.js"></script>
     </body>
 </html>

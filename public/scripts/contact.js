@@ -1,36 +1,40 @@
-const emailButton = document.querySelector(".email");
-const emailPopup = document.querySelector("#copyemailpopup");
-const emailPrompt = document.querySelector("#copyemailprompt");
-const copyEmailBtn = document.querySelector("#copyemail");
-var isCursorOverPopup = false;
+const emailButton = document.querySelector('.email');
+const emailPopup = document.querySelector('#copyemailpopup');
+const emailPrompt = document.querySelector('#copyemailprompt');
+const copyEmailBtn = document.querySelector('#copyemail');
 
-emailButton.addEventListener("click", () => {
-    emailPrompt.style.display = "flex";
-    emailPopup.focus();
-});
+if (emailButton && emailPopup && emailPrompt && copyEmailBtn) {
+    let isCursorOverPopup = false;
 
-emailPopup.addEventListener("blur", () => {
-    if (!isCursorOverPopup) {
-        emailPrompt.style.display = "none";
-        copyEmailBtn.innerHTML = "Copy email";
-    } else {
+    emailButton.addEventListener('click', () => {
+        emailPrompt.style.display = 'flex';
         emailPopup.focus();
-    }
-});
+    });
 
-emailPopup.addEventListener("mouseover", () => {
-    isCursorOverPopup = true;
-});
+    emailPopup.addEventListener('blur', () => {
+        if (!isCursorOverPopup) {
+            emailPrompt.style.display = 'none';
+            copyEmailBtn.textContent = 'Copy email';
+        } else {
+            emailPopup.focus();
+        }
+    });
 
-emailPopup.addEventListener("mouseout", () => {
-    isCursorOverPopup = false;
-});
+    emailPopup.addEventListener('mouseover', () => {
+        isCursorOverPopup = true;
+    });
 
-copyEmailBtn.addEventListener("click", () => {
-    try {
-        navigator.clipboard.writeText("ptmathcircle@gmail.com");
-        copyEmailBtn.innerHTML = "Copied!";
-    } catch (err) {
-        console.error('Failed to copy text: ', err);
-    }
-});
+    emailPopup.addEventListener('mouseout', () => {
+        isCursorOverPopup = false;
+    });
+
+    copyEmailBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText('ptmathcircle@gmail.com');
+            copyEmailBtn.textContent = 'Copied!';
+        } catch (err) {
+            console.error('Failed to copy text:', err);
+            copyEmailBtn.textContent = 'Try again';
+        }
+    });
+}
