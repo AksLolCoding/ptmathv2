@@ -119,6 +119,7 @@ a {
     align-items: center;
     justify-content: center;
     background: rgba(8, 18, 28, 0.5);
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: 1200;
 }
@@ -189,7 +190,7 @@ a {
 }
 
 body.compact-hero .hero {
-    min-height: auto;
+    
     display: block;
     padding: 0;
     background: none;
@@ -437,14 +438,15 @@ body.compact-hero .hero-media {
 }
 
 @media (max-width: 950px) {
+
     .hero {
         grid-template-columns: 1fr;
-        min-height: auto;
+        
     }
 
     body.compact-hero .hero {
         grid-template-columns: 1fr;
-        min-height: auto;
+        
     }
 
     .grid.cols-3,
@@ -455,10 +457,13 @@ body.compact-hero .hero-media {
 }
 
 @media (max-width: 760px) {
+
     .navbar {
         overflow-x: auto;
         scrollbar-width: none;
+        -ms-overflow-style: none;
     }
+
 
     .navbar::-webkit-scrollbar {
         display: none;
