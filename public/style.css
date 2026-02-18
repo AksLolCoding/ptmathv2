@@ -41,6 +41,8 @@ body {
         radial-gradient(circle at 15% -5%, rgba(55, 210, 164, 0.08) 0, rgba(55, 210, 164, 0) 40%),
         linear-gradient(160deg, #050a11 0%, #0a121d 55%, #101b2a 100%);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -76,8 +78,9 @@ a {
 }
 
 .navbar a:hover,
-.navbar p:hover {
-    background: #1a2e43;
+.navbar p:hover,
+.footer-section.social a:hover {
+    background: #233e5a;
     transform: translateY(-1px);
 }
 
@@ -92,10 +95,6 @@ a {
     max-width: none;
     object-fit: contain;
     display: block;
-}
-
-.navbar .home:hover {
-    background: #1a2e43;
 }
 
 .discord {
@@ -428,6 +427,90 @@ a {
 .empty-page p {
     margin-top: 0.7rem;
     color: var(--text-muted);
+}
+
+/* --- Footer Styles --- */
+.footer {
+    background: var(--surface-strong);
+    color: var(--text-muted);
+    padding: 1rem 0 1rem 0;
+    border-top: 1px solid var(--line);
+    margin-top: 0rem;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.footer-section {
+}
+
+.footer-section h2,
+.footer-section h3 {
+    color: var(--text);
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.footer-section.about p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-section.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-section.social a {
+    display: inline-block;
+    margin: 0 0.2rem;
+    padding: 0.6rem clamp(0.45rem, 1vw, 0.85rem);
+    text-decoration: none;
+    color: #eff7ff;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 220ms ease, transform 220ms ease;
+    cursor: pointer;
+}
+
+.footer-section.social a:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    border-top: 1px solid var(--line);
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 0 0.7rem;
+    }
+    .footer-section {
+        min-width: 0;
+    }
 }
 
 @media (max-width: 950px) {
