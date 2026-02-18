@@ -25,8 +25,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           # 2. Add the original repository as a remote named 'upstream'
-          # CHANGE THESE: replace ORIGINAL_OWNER/ORIGINAL_REPO with the source repo info
-          git remote add upstream https://github.com
+          git remote add upstream https://github.com/gensahilsingh/ptmathv2
           
           # 3. Fetch all branches and commits from upstream
           git fetch upstream
