@@ -1,39 +1,43 @@
+name: Sync Fork with Upstream
+
 on:
   schedule:
-    - cron:  '0 * * * *'
-
-  workflow_dispatch:  # click the button on Github repo!
-
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+  workflow_dispatch: # Allows you to run this manually from the "Actions" tab
 
 jobs:
-  sync_with_upstream:
+  sync:
     runs-on: ubuntu-latest
-    name: Sync main with upstream latest
+    # Required for the action to push changes back to your fork
+    permissions:
+      contents: write
 
     steps:
-    # Step 1: run a standard checkout action, provided by github
-    - name: Checkout main
-      uses: actions/checkout@v2
-      with:
-        ref: main
-        # submodules: 'recursive'     ### may be needed in your situation
+      - name: Checkout Fork
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches full history to avoid "unrelated histories" error
 
-    # Step 2: run this sync action - specify the upstream repo, upstream branch to sync with, and target sync branch
-    - name: Pull (Fast-Forward) upstream changes
-      id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v2.1
-      with:
-        upstream_repository: gensahilsingh/ptmathv2
-        upstream_branch: main
-        target_branch: main
-        git_pull_args: --no-ff
-        github_token: ${{ secrets.GITHUB_TOKEN }}   # optional, for accessing repos that require authentication
+      - name: Configure Git and Sync
+        run: |
+          # 1. Identify as the GitHub Actions Bot
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-    # Step 3: Display a message if 'sync' step had new commits (simple test)
-    - name: Check for new commits
-      if: steps.sync.outputs.has_new_commits
-      run: echo "There were new commits."
+          # 2. Add the original repository as a remote named 'upstream'
+          # CHANGE THESE: replace ORIGINAL_OWNER/ORIGINAL_REPO with the source repo info
+          git remote add upstream https://github.com
+          
+          # 3. Fetch all branches and commits from upstream
+          git fetch upstream
 
-    # Step 4: Print a helpful timestamp for your records (not required, just nice)
-    - name: Timestamp
-      run: date
+          # 4. Ensure we are on the main branch (adjust to 'master' if needed)
+          git checkout main
+
+          # 5. Merge upstream changes. 
+          # --allow-unrelated-histories fixes the error you were seeing.
+          # -X theirs tells Git to prefer upstream changes if there is a conflict.
+          git merge upstream/main --allow-unrelated-histories -m "Automated sync from upstream" -X theirs
+
+          # 6. Push the updated code back to your fork (origin)
+          git push origin main
